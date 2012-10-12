@@ -53,7 +53,7 @@ typedef NSUInteger BACellSeparatorPositions;
 
 @property(nonatomic, assign) id<BASeparatedTableProviderDelegate> delegate;
 
-- (NSIndexPath *)separatedIndexPathForIndexPath:(NSIndexPath *)indexPath;
-- (NSArray *)separatedIndexPathsForIndexPaths:(NSArray *)indexPaths;
++ (NSIndexPath *)separatedIndexPathForIndexPath:(NSIndexPath *)indexPath;
++ (NSArray *)separatedIndexPathsForIndexPaths:(NSArray *)indexPaths;
 
 @end

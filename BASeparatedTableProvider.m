@@ -38,11 +38,11 @@
 	[super setDelegate:delegate];
 }
 
-- (NSIndexPath *)separatedIndexPathForIndexPath:(NSIndexPath *)indexPath {
++ (NSIndexPath *)separatedIndexPathForIndexPath:(NSIndexPath *)indexPath {
 	return [NSIndexPath indexPathForRow:((indexPath.row * 3) + 1) inSection:indexPath.section];
 }
 
-- (NSArray *)separatedIndexPathsForIndexPaths:(NSArray *)indexPaths {
++ (NSArray *)separatedIndexPathsForIndexPaths:(NSArray *)indexPaths {
 	if (!indexPaths) {
 		return nil;
 	}
