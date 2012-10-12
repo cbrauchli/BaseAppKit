@@ -28,52 +28,7 @@
 
 #import "BASeparatedTableProvider.h"
 
-@implementation BASeparatedTableProvider {
-//  struct {
-//    // UITableViewDelegate
-//    unsigned int willDisplayCell:1;
-//    unsigned int willDisplayHeaderView:1;
-//    unsigned int willDisplayFooterView:1;
-//    unsigned int didEndDisplayingCell:1;
-//    unsigned int didEndDisplayingHeaderView:1;
-//    unsigned int didEndDisplayingFooterView:1;
-//    unsigned int heightForRowAtIndexPath:1;
-//    unsigned int heightForHeaderInSection:1;
-//    unsigned int heightForFooterInSection:1;
-//    unsigned int viewForHeaderInSection:1;
-//    unsigned int viewForFooterInSection:1;
-//    unsigned int accessoryTypeForRowWithIndexPath:1;
-//    unsigned int accessoryButtonTappedForRowWithIndexPath:1;
-//    unsigned int shouldHighlightRowAtIndexPath:1;
-//    unsigned int didHighlightRowAtIndexPath:1;
-//    unsigned int didUnhighlightRowAtIndexPath:1;
-//    unsigned int willSelectRowAtIndexPath:1;
-//    unsigned int willDeselectRowAtIndexPath:1;
-//    unsigned int didSelectRowAtIndexPath:1;
-//    unsigned int didDeselectRowAtIndexPath:1;
-//    unsigned int editingStyleForRowAtIndexPath:1;
-//    unsigned int titleForDeleteConfirmationButtonForRowAtIndexPath:1;
-//    unsigned int shouldIndentWhileEditingRowAtIndexPath:1;
-//    unsigned int willBeginEditingRowAtIndexPath:1;
-//    unsigned int didEndEditingRowAtIndexPath:1;
-//    unsigned int targetIndexPathForMoveFromRowAtIndexPath:1;
-//    unsigned int indentationLevelForRowAtIndexPath:1;
-//    unsigned int shouldShowMenuForRowAtIndexPath:1;
-//    unsigned int canPerformAction:1;
-//    unsigned int performAction:1;
-//    
-//    // UITableViewDataSource
-//    unsigned int numberOfSectionsInTableView:1;
-//    unsigned int titleForHeaderInSection:1;
-//    unsigned int titleForFooterInSection:1;
-//    unsigned int canEditRowAtIndexPath:1;
-//    unsigned int canMoveRowAtIndexPath:1;
-//    unsigned int sectionIndexTitlesForTableView:1;
-//    unsigned int sectionForSectionIndexTitle:1;
-//    unsigned int commitEditingStyle:1;
-//    unsigned int moveRowAtIndexPath:1;
-//  } _delegateRespondsTo;
-}
+@implementation BASeparatedTableProvider
 
 - (id<BASeparatedTableProviderDelegate>)delegate {
 	return (id<BASeparatedTableProviderDelegate>)[super delegate];
@@ -119,12 +74,12 @@
 	return nil;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	if ([self.delegate respondsToSelector:@selector(numberOfSectionsInTableView:)]) {
-		return [self.delegate numberOfSectionsInTableView:tableView];
-	}
-	return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//	if ([self.delegate respondsToSelector:@selector(numberOfSectionsInTableView:)]) {
+//		return [self.delegate numberOfSectionsInTableView:tableView];
+//	}
+//	return 1;
+//}
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 //	if ([self.delegate respondsToSelector:@selector(tableView:titleForHeaderInSection:)]) {
@@ -198,33 +153,12 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 	return 0;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-  if ([self.delegate respondsToSelector:@selector(tableView:heightForHeaderInSection:)]) {
-    return [self.delegate tableView:tableView heightForHeaderInSection:section];
-  }
-  return 0.f;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-  if ([self.delegate respondsToSelector:@selector(tableView:heightForFooterInSection:)]) {
-    return [self.delegate tableView:tableView heightForFooterInSection:section];
-  }
-  return 0.f;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section;
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-  if ([self.delegate respondsToSelector:@selector(tableView:viewForHeaderInSection:)]) {
-    return [self.delegate tableView:tableView viewForHeaderInSection:section];
-  }
-  return nil;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-  if ([self.delegate respondsToSelector:@selector(tableView:viewForFooterInSection:)]) {
-    return [self.delegate tableView:tableView viewForFooterInSection:section];
-  }
-  return nil;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
 
 //- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath;
 
